@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Docs · Circuit</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23070b14'/%3E%3Cpath d='M28 62V38l22-13 22 13v24L50 75 28 62z' fill='none' stroke='%2322d3ee' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    .docs-page { max-width: 1080px; margin: 0 auto; padding: 0 24px 80px; position: relative; }
+    .docs-header { display: flex; align-items: center; gap: 16px; padding: 26px 0; border-bottom: 1px solid var(--border-soft); margin-bottom: 26px; }
+    .docs-header h1 { font-size: 1.4rem; }
+    .docs-header p { color: var(--muted); font-size: .82rem; margin-top: 3px; }
+    .docs-header .links { margin-left: auto; display: flex; gap: 10px; }
+    .docs-section { margin-bottom: 30px; }
+    .docs-section > h2 { font-size: 1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .docs-section > h2 .count { font-size: .7rem; color: var(--muted); background: var(--surface-2); border: 1px solid var(--border); border-radius: 20px; padding: 2px 8px; }
+    .endpoint { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border-soft); border-radius: 12px; background: rgba(15,23,39,.55); margin-bottom: 8px; }
+    .method { font-family: var(--mono); font-size: .68rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; min-width: 58px; text-align: center; letter-spacing: .04em; }
+    .method.get { background: rgba(52,211,153,.12); color: #6ee7b7; border: 1px solid rgba(52,211,153,.25); }
+    .method.post { background: rgba(96,165,250,.12); color: #93c5fd; border: 1px solid rgba(96,165,250,.25); }
+    .method.patch { background: rgba(251,191,36,.12); color: #fcd34d; border: 1px solid rgba(251,191,36,.25); }
+    .method.delete { background: rgba(251,113,133,.12); color: #fda4af; border: 1px solid rgba(251,113,133,.25); }
+    .endpoint .path { font-family: var(--mono); font-size: .82rem; color: var(--text); }
+    .endpoint .summary { color: var(--muted); font-size: .78rem; margin-top: 3px; }
+    .endpoint .auth { margin-left: auto; font-size: .66rem; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 8px; white-space: nowrap; }
+    .docs-intro { color: var(--text-dim); line-height: 1.65; font-size: .88rem; margin-bottom: 22px; }
+    .docs-intro code { font-family: var(--mono); color: var(--accent); background: rgba(34,211,238,.08); padding: 1px 6px; border-radius: 5px; }
+    @media (max-width: 640px) { .endpoint { flex-wrap: wrap; } .endpoint .auth { margin-left: 0; } }
+  </style>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span></div>
+  <div class="docs-page">
+    <header class="docs-header">
+      <div class="brand-mark"><svg viewBox="0 0 100 100"><path d="M28 62V38l22-13 22 13v24L50 75 28 62z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg></div>
+      <div><h1>Circuit API</h1><p>ECE Component Tracking System · REST reference</p></div>
+      <div class="links">
+        <a class="btn btn-ghost btn-sm" href="/api/openapi.json" target="_blank" rel="noopener">openapi.json</a>
+        <a class="btn btn-primary btn-sm" href="/">Back to app</a>
+      </div>
+    </header>
+    <p class="docs-intro">
+      All endpoints are served from the same origin. Authenticate with <code>POST /api/auth/login</code>, then send
+      <code>Authorization: Bearer &lt;accessToken&gt;</code> on protected routes. Access tokens are short-lived; use
+      <code>POST /api/auth/refresh</code> to rotate the refresh token.
+    </p>
+    <main id="docs"><div class="skeleton sk-line"></div><div class="skeleton sk-line"></div></main>
+  </div>
+  <script src="/js/docs.js"></script>
+</body>
+</html>
